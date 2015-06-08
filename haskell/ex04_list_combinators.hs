@@ -6,7 +6,8 @@ import Test.HUnit
  - a) reverse'
  - b) map'
  - c) filter'
- - d) concat'
+ - d) (+++)
+ - e) concat'
  - Bonus points for using currying and point-free notation :).
  -}
 
@@ -18,6 +19,9 @@ map' = undefined
 
 filter' :: (a -> Bool) -> [a] -> [a]
 filter' = undefined
+
+(+++) :: [a] -> [a] -> [a]
+(+++) = undefined
 
 concat' :: [[a]] -> [a]
 concat' = undefined
@@ -32,9 +36,12 @@ testMap = TestCase $ assertEqual "map' maps" [2, 3, 4] (map' (+ 1) [1, 2, 3])
 
 testFilter = TestCase $ assertEqual "filter' filters" [2, 4] (filter' even [1, 2, 3, 4])
 
+testPlusPlusPlus = TestCase $ assertEqual "+++ appends" [1, 2, 3, 4] ([1, 2] +++ [3, 4])
+
 testConcat = TestCase $ assertEqual "concat' concats" [1, 2, 3, 4, 5] (concat' [[1, 2], [3, 4], [5]])
 
 main = runTestTT $ TestList [ testReverse
                             , testMap
                             , testFilter
+                            , testPlusPlusPlus
                             , testConcat ]

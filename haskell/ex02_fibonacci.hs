@@ -1,7 +1,7 @@
 import Test.HUnit
 
 {-
- - Problem 2: Tail-Recursion and Coinduction
+ - Problem 2: Tail-Recursion and Coinduction.
  - Implement two functions for computing fibonacci sequence.
  - First function should be tail-recursive.
  - Second should make use of infinite lists.

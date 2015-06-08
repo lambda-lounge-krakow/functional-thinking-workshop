@@ -3,8 +3,8 @@ import Test.HUnit
 {-
  - Problem 3: Folds.
  - Implement three versions of fold function.
- - a) foldl' - tail recursive function applying the function int left-to-right order.
- - b) foldr' - non-tails recursive, applying right-to-left.
+ - a) foldl' - tail recursive function applying the function in the left-to-right order.
+ - b) foldr' - non-tail recursive, applying right-to-left.
  - c) folds  - using list-manipulation techniques generate a list of all partial results
  -             of folding in the left-to-right order.
  -}
